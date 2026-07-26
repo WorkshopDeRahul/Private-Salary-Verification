@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../../",
+  "sources": ["contracts/private-salary-verification.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAYA,AAAA,kBAKC;;;;;cALiC,YAAqB;;;;;;;;;;;;;;;;;;yCAArB,YAAqB;;;;;;;;;oDAArB,YAAqB;;;OAKtD;MAID,AAAA,qBAaC;;;;;cAZG,oBAA4B;cAC5B,cAAsB;cACtB,YAAqB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yCAFrB,oBAA4B,+BAC5B,cAAsB,+BACtB,YAAqB;;;;;;;;;uDAFrB,oBAA4B;uDAC5B,cAAsB;uDACtB,YAAqB;;;OAUxB;MAGD,AAAA,sBAEC;;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;;;GACA;EAxCD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAKA;;;;;;;;;yEAAuC;IACvC;;;;;;;;;yEAA0C;IAC1C;;;;;;;;;yEAAgD;IAChD;;;;;;;;;yEAAkC;IAClC;;;;;;;;;yEAAgD;;;;;;;GA+B/C;EA5BD,AAAA,qBAKC,4BALiC,YAAqB;IACnD;;;;;;;2HAAyB,YAAU;;yEAAtB;UACb,KAAiB;IAAjB;;;;;;;2HAAA,KAAiB;;yEAAA;UACjB,KAAuB;IAAvB;;;;;;;2HAAA,KAAuB;;yEAAA;IACvB;;;;;;;;;yEAAU;;GACb;EAID,AAAA,wBAaC;;2BAZG,oBAA4B;2BAC5B,cAAsB;2BACtB,YAAqB;;4BAGd,cAAY,IAAI,oBAAkB;;UAGzC,KAAiB;;;;;6CAAa;;;;;;;;;;;kHAAiB;;;IAA/C;;;;;;;2HAAA,KAAiB;;yEAAA;IACjB;;;;;;;2HAAmC,oBAAkB;;yEAA9B;IACvB;;;;;;;;;yEAAU;IACV;;;;;;;2HAAkC,YAAU;;yEAAtB;;GACzB;EAGD,AAAA,yBAEC;IADG;;;;;;;;;yEAAU;;GACb;;;;;;;;;;;;;;;;IAlCD;qCAAA;;;;;;;;;;;0GAAuC;KAAA;IACvC;qCAAA;;;;;;;;;;;0GAA0C;KAAA;IAC1C;qCAAA;;;;;;;;;;;0GAAgD;KAAA;IAChD;qCAAA;;;;;;;;;;;0GAAkC;KAAA;IAClC;qCAAA;;;;;;;;;;;0GAAgD;KAAA;;;;;;;;;;"
+}

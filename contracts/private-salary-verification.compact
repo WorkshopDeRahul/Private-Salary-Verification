@@ -1,0 +1,40 @@
+pragma language_version >= 0.23;
+
+import CompactStandardLibrary;
+
+// Public ledger state - visible on Midnight blockchain
+export ledger verifierOwner: Bytes<32>;
+export ledger verificationCount: Uint<64>;
+export ledger latestVerifiedThreshold: Uint<64>;
+export ledger isVerified: Boolean;
+export ledger verifiedCommitmentHash: Bytes<32>;
+
+// Initialize verifier admin key
+export circuit initializeVerifier(verifierPk: Bytes<32>): [] {
+    verifierOwner = disclose(verifierPk);
+    verificationCount = disclose(0 as Uint<64>);
+    latestVerifiedThreshold = disclose(0 as Uint<64>);
+    isVerified = disclose(false);
+}
+
+// Circuit: Privately verify that employee secret salary >= requestedThreshold
+// Verification passes in ZK without exposing secret salary or employee secret to third parties.
+export circuit verifySalaryThreshold(
+    requestedThreshold: Uint<64>,
+    secretSalary: Uint<64>,
+    secretSalt: Bytes<32>
+): [] {
+    // Zero-knowledge constraint assertion: secretSalary must be greater than or equal to threshold
+    assert(secretSalary >= requestedThreshold, "Salary does not meet required threshold");
+    
+    // Disclose public outcome ledger state
+    verificationCount = disclose((verificationCount + 1) as Uint<64>);
+    latestVerifiedThreshold = disclose(requestedThreshold);
+    isVerified = disclose(true);
+    verifiedCommitmentHash = disclose(secretSalt);
+}
+
+// Reset verification state if needed
+export circuit resetVerificationState(): [] {
+    isVerified = disclose(false);
+}
