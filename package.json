@@ -1,0 +1,61 @@
+{
+  "name": "private-salary-verification",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Midnight Network dApp for Zero-Knowledge Private Salary Verification",
+  "author": "Rahul Saha <rahulsaha20030504@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "export PATH=$HOME/.local/bin:$PATH && if command -v compact >/dev/null 2>&1; then compact compile contracts/private-salary-verification.compact contracts/managed/private-salary-verification; else echo \"Compact compiler not found in environment, using managed circuit artifacts.\"; fi",
+    "build": "npx tsc --noEmit",
+    "build:frontend": "vite build",
+    "dev": "vite",
+    "setup": "npx tsx src/setup.ts",
+    "deploy": "npx tsx src/deploy.ts",
+    "cli": "npx tsx src/cli.ts",
+    "check-balance": "npx tsx src/check-balance.ts",
+    "network": "npx tsx src/network.ts",
+    "proof-server:start": "docker compose up -d",
+    "proof-server:stop": "docker compose down",
+    "clean": "rm -rf contracts/managed .midnight-state.json .midnight-wallet-state dist",
+    "test": "npx vitest run",
+    "test:e2e": "tsx scripts/e2e-check.ts"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/compact-runtime": "0.16.0",
+    "@midnight-ntwrk/midnight-js-contracts": "4.1.1",
+    "@midnight-ntwrk/midnight-js-http-client-proof-provider": "4.1.1",
+    "@midnight-ntwrk/midnight-js-indexer-public-data-provider": "4.1.1",
+    "@midnight-ntwrk/midnight-js-level-private-state-provider": "4.1.1",
+    "@midnight-ntwrk/midnight-js-network-id": "4.1.1",
+    "@midnight-ntwrk/midnight-js-node-zk-config-provider": "4.1.1",
+    "@midnight-ntwrk/midnight-js-protocol": "4.1.1",
+    "@midnight-ntwrk/midnight-js-types": "4.1.1",
+    "@midnight-ntwrk/midnight-js-utils": "4.1.1",
+    "@midnight-ntwrk/wallet-sdk": "1.2.0",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "rxjs": "^7.8.2",
+    "ws": "^8.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": ["midnight", "blockchain", "zero-knowledge", "privacy", "salary-verification"]
+}
